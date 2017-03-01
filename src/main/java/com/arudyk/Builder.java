@@ -5,7 +5,13 @@ import java.util.List;
 
 public class Builder {
 
-    public static void viewResult(String url) throws IOException {
+    String url;
+
+    public Builder(String url) {
+        this.url = url;
+    }
+
+    public void viewResult() throws IOException {
         String htmlFile = UrlProcessor.getPageAsString(url);
         HtmlParser htmlParser = new HtmlParser(url, htmlFile);
         List<String> unsortedList = htmlParser.parse();

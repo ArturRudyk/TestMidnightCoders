@@ -5,7 +5,8 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-            Builder.viewResult(args[0]);
+           Builder builder= new  Builder(args[0]);
+           builder.viewResult();
     }
 
 }
